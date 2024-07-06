@@ -44,3 +44,8 @@
   a = [1, 2, 3]
   a[-3] = 10
   a #=> [10, 2, 3]
+
+24/7/6
+- with_indexメソッドを使って、添え字を付けることができる
+  fruits = ['apple', 'orange', 'melon']
+  frunts.map.with_index { |fruit, i| "#{i}: #{fruit}" }
