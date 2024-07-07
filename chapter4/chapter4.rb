@@ -49,3 +49,26 @@
 - with_indexメソッドを使って、添え字を付けることができる
   fruits = ['apple', 'orange', 'melon']
   frunts.map.with_index { |fruit, i| "#{i}: #{fruit}" }
+
+24/7/7
+- 様々な繰り返し処理
+  - timesメソッド：配列を使わずに単純にn回処理をしたい場合
+    sum = 0
+    5.times { |n| sum+= n }
+    sum #=>10
+  - upto, downtoメソッド：nからmまで数値を1つずつ増やし（減らし）ながら、処理を行う
+    a = []
+    10.upto(14) { |n| a << n}
+    14.downto(10) { |n| a << n}
+  - stepメソッド：nからmまで数値をx個ずつ増やしながら処理
+    a = []
+    1.step(10, 2) { |n| a << n }
+    a #=> [1,3,5,7,9]
+  - while文は条件が真である間、until文は条件が偽である間繰り返し処理を行う
+  - forよりeachを使う
+- breakを使うと繰り返し処理を脱出できる
+  numbers = [1, 2, 3, 4, 5].shuffle
+  numbers.each do |n|
+    puts n
+    break if n == 5
+  end
