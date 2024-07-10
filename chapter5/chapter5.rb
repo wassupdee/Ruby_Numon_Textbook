@@ -27,3 +27,20 @@
 
   buy_burger(drink: true, potato: true)
   # キーワード引数を使わない場合、buy_burger(true, true)となり、何がtrueなのか分かりにくい
+
+24/7/10
+- よく使われるイディオム
+  1.ぼっち演算(&.)
+    nilに対してメソッドを呼び出してしまい、エラーが起きないようにする記法
+    hoge.upcase　#hogeがnilの場合、no method errorが起きる
+    hoge&.upcase #hogeがnilの場合、errorではなくnilが返る
+
+  2.nilガード
+    変数がtrue（何か入っていれば）、代入しないようにする記法
+    a = 10
+    a ||= 30
+    a #=> 10
+  
+  3.!!を使い、trueまたはfalseのみを返す
+    !!nil = false
+    nilの否定はtrue、trueの否定はfalseとなる
