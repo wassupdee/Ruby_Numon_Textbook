@@ -41,3 +41,25 @@ User.new
 User.users_count
 
 => 現在のユーザー数は3人です
+
+24/7/16
+- selfはクラス自身を指す場合もあるし、インスタンスを指す場合もある
+- ゲッターメソッドの場合は、nameだけでOKだが、セッターメソッドを使いたい場合は、self.name = 'hoge'とselfを使う必要がある
+class User
+  attr_accessor :name
+  
+  def initialize(name)
+    @name = name
+  end
+
+  def hi
+    "Hi, I am #{name}."
+  end
+  
+  def rename
+	  self.name = 'Bob'
+  end
+end
+
+user = User.new('Alice')
+puts user.hi # => "Hi, I am Alice."
