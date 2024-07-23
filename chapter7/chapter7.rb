@@ -71,3 +71,6 @@ puts user.hi # => "Hi, I am Alice."
 
 24/7/21
 - モデルのメソッド内には、基本的にselfは使わない（使うときは、明示的にしたいとき）
+
+24/7/23
+- アクセサメソッドはActiveRecordクラスには自動的につく。それ以外は、たとえActiveModel::Modelをインクルードしていてもattr_accessorを付けないと使えない
